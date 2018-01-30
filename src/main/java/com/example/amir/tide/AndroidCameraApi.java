@@ -254,7 +254,7 @@ public class AndroidCameraApi extends AppCompatActivity {
                         JsonElement element4 = gson.fromJson(jsonObj2.getAsJsonArray("classes").get(0).toString(), JsonElement.class);
                         JsonObject jsonObj4 = element4.getAsJsonObject();
 
-                        if(Double.parseDouble((jsonObj3.get("score").toString())) > 0.3 || Double.parseDouble((jsonObj4.get("score").toString())) < 0.3){
+                        if(Double.parseDouble((jsonObj3.get("score").toString())) > 0.285){
                             String toSpeak = "This is a Tide Pod! Please refrain from eating it.";
                             Toast.makeText(AndroidCameraApi.this, "Tide Pod", Toast.LENGTH_LONG).show();
                             t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
